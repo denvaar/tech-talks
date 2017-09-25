@@ -1,0 +1,26 @@
+<div class="dt pv4 sans-serif">
+  <div class="fn fl-ns w-50-ns mw6">
+    <span><%= link "Back", to: page_path(@conn, :index) %></span>
+    <ul class="list ph3 pv4" id="topics">
+      <%= for topic <- @topics do %>
+        <li class="dib mr2">
+          <span id="<%= topic.id %>" class="f6 f5-ns b db pa2 link dim mid-gray like-container" data-topic="<%= topic.id %>">
+            <%= topic.name %>
+            <span class="like-badge">
+              <%= topic.likes %>
+            </span>
+          </span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="fn fl-ns w-50-ns">
+    <div class="lh-copy mv0">
+      <main class="sans-serif pa4 black-70 measure ">
+        <legend class="f4 fw6 ph0 mh0">Request Topic</legend>
+        <%= render "form.html", Map.put(assigns, :action, topic_path(@conn, :create)) %>
+      </main>
+    </div>
+  </div>
+</div>
+<script src="<%= static_path(@conn, "/js/liker.js") %>"></script>

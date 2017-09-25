@@ -1,0 +1,37 @@
+<header class="sans-serif">
+  <div class="cover bg-left bg-center-l" style="background-image: url(https://www.thekharkivtimes.com/wp-content/up
+loads/2016/09/programmer-at-work.jpg)">
+    <div class="bg-blue pb5 pb6-m pb7-l">
+      <nav class="dt w-100 center pa3">
+      </nav>
+      <div class="tc-l mt4 mt5-m mt6-l ph3">
+        <h1 class="f3 f1-m f-headline-l white fw2">Decisely Tech Talks</h1>
+        <h2 class="fw1 f3 white-80 mt3 mb4">Wednesdays @ 2:00 pm MST</h2>
+        <%= link "Give a Talk", to: talk_path(@conn, :new), class: "f6 no-underline dim dib v-mid bg-white blue ba
+b--white ph3 pv2 mb3" %>
+        <span class="dib ph3 white-70 mb3 v-mid">or</span>
+        <%= link "Request a Topic", to: topic_path(@conn, :new), class: "f6 no-underline dim dib v-mid white ba b--
+white ph3 pv2 mb3" %>
+        <div>
+          <%= link "About", to: about_path(@conn, :index), class: "white fw2" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="justify-center tc black-70">
+  <h4 class="sans-serif f5 mb4 mt4 pb2">Upcomming</h4>
+</div>
+<ul class="sans-serif list pl0 mt0 measure center">
+  <%= for talk <- @talks do %>
+    <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
+      <div class="pl3 flex-auto">
+        <span class="f6 db black-50"><%= date_format(talk.date) %></span>
+        <span class="f6 black-70 b"><%= talk.topic %></span>
+        <span class="f6 black-70">- <%= talk.presenter %></span>
+        <span class="f6 db black-70"><%= talk.description %></span>
+        <span class="f6 db black-50 i fr">about <%= talk.estimated_duration %></span>
+      </div>
+    </li>
+  <% end %>
+</ul>

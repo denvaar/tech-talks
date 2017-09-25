@@ -1,0 +1,14 @@
+<main class="sans-serif black-70 pa3 pa5-ns">
+  <h1 class="f3 f1-m f-headline-l">About</h1>
+  <p class="f5 lh-copy measure">Come and get so smart. We will cover topics related to the following:
+    <ul>
+      <li>Something related to our codebase</li>
+      <li>Development best practices</li>
+      <li>Different programming languages or frameworks</li>
+      <li>Personal projects or ideas</li>
+      <li>Something recently learned</li>
+      <li>Etc!</li>
+    </ul>
+   </p>
+   <span><%= link "Back", to: page_path(@conn, :index) %></span><Paste>
+</main>

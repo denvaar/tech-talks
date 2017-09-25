@@ -1,0 +1,11 @@
+<div class="dt pv4 sans-serif">
+  <span><%= link "Back", to: page_path(@conn, :index) %></span>
+  <div class="lh-copy mv0">
+    <main class="sans-serif pa4 black-70">
+      <legend class="f4 fw6 ph0 mh0">Give a Talk</legend>
+      <%= render "form.html", Map.put(assigns, :action, talk_path(@conn, :create)) %>
+    </main>
+  </div>
+</div>
+
+

@@ -1,0 +1,33 @@
+<h2>Show Talk</h2>
+
+<ul>
+
+  <li>
+    <strong>Topic:</strong>
+    <%= @talk.topic %>
+  </li>
+
+  <li>
+    <strong>Presenter:</strong>
+    <%= @talk.presenter %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @talk.description %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @talk.date %>
+  </li>
+
+  <li>
+    <strong>Estimated duration:</strong>
+    <%= @talk.estimated_duration %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: talk_path(@conn, :edit, @talk) %></span>
+<span><%= link "Back", to: talk_path(@conn, :index) %></span>
