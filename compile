@@ -1,1 +1,5 @@
+cd assests
+yarn
+yarn run deploy
+cd ..
 mix phx.digest
