@@ -1,5 +1,5 @@
-cd assests
+cd ./assests
 yarn
 yarn run deploy
-cd ..
+cd ./..
 mix phx.digest
