@@ -1,6 +1,5 @@
-ls
-cd $phoenix_dir/assests
+cd assets
 yarn
 yarn run deploy
-cd $phoenix_dir/..
+cd ..
 mix phx.digest
