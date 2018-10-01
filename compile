@@ -1,5 +1,0 @@
-cd assets
-yarn
-yarn run deploy
-cd ..
-mix phx.digest

@@ -1,0 +1,33 @@
+{
+  "name": "Tech Talks",
+  "description": "An app to sign up for and request tech talks",
+  "repository": "https://github.com/denvaar/tech-talks",
+  "keywords": [
+    "elixir",
+    "phoenix",
+    "community"
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    { "url": "hashnuke/elixir" },
+    { "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static" }
+  ],
+  "env": {
+    "HOST_URL": {
+      "description": "The URL at which the application will be deployed. Initially, set to <APP_NAME>.herokuapp.com."
+    },
+    "MIX_ENV": {
+      "description": "The environment for running the application.",
+      "value": "prod"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
+  },
+  "scripts": {
+    "postdeploy": "mix ecto.migrate"
+  }
+}
