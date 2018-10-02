@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
+ASSET_DIR=$(realpath "$ROOT/../assets")
+
+yarn --cwd="$ASSET_DIR" run deploy

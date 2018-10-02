@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "copy-webpack-plugin": "^4.0.1"
-  }
-}
